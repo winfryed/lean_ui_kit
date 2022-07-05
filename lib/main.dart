@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lean_ui_kit/test_widget.dart';
+import 'package:lean_ui_kit/widgets/presentation/test_widget.dart';
 
 void main() {
   runApp(const MyApp());
