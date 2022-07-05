@@ -28,4 +28,13 @@ abstract class AppTheme {
 
   ColorTuple get secondaryTuple =>
       ColorTuple(foregroundSecondary, backgroundSecondary);
+
+  List<BoxShadow> get boxShadow => [
+    BoxShadow(
+      color: Colors.grey.withOpacity(0.3),
+      spreadRadius: 2,
+      blurRadius: 20,
+      offset: const Offset(0, 3), // changes position of shadow
+    ),
+  ];
 }
