@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:lean_ui_kit/presentation/test_widget.dart';
+import 'package:lean_ui_kit/presentation/widgets/lean_button.dart';
+import 'package:lean_ui_kit/theming/app_theme/lean_app_theme.dart';
+import 'package:lean_ui_kit/theming/app_theme_access.dart';
 
 void main() {
+  AppThemeAccess.init(theme: LeanAppTheme());
   runApp(const MyApp());
 }
 
@@ -13,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: Scaffold(body:  NiceWidget()),
+      home: Scaffold(body:  LeanButton(child: Text("test"),onPressed: (){},)),
     );
   }
 }

@@ -1,5 +1,5 @@
-import 'dart:ui';
 
+import 'package:flutter/material.dart';
 import 'package:lean_ui_kit/theming/color_set/color_set.dart';
 
 /// This class represents the set of colors of the app.
