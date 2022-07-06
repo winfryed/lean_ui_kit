@@ -1,7 +1,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:lean_ui_kit/presentation/widgets/lean_heading.dart';
+import 'package:lean_ui_kit/presentation/widgets/lean_scaffold.dart';
 import 'package:lean_ui_kit/presentation/widgets/lean_text.dart';
 import 'package:lean_ui_kit/theming/app_theme/lean_app_theme.dart';
 import 'package:lean_ui_kit/theming/app_theme_access.dart';
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: Scaffold(body:  Column(children: [LeanText.s1("hi yuri"),LeanText.s2("hi yuri"),LeanText.s3("hi yuri"),LeanText.s4("hi yuri"),LeanHeading.s1("hi yuri")],),),
+      home: LeanScaffold(body: LeanText("hi"))
     );
   }
 }

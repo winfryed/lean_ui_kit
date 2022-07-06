@@ -37,5 +37,5 @@ class LeanAppTheme extends AppTheme {
   double get defaultHeadingSize => headingSizeSet.s2;
 
   @override
-  Color get defaultTextColor => backgroundPrimary;
+  Color get defaultTextColor => foregroundPrimary;
 }
