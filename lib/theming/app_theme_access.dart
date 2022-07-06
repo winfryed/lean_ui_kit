@@ -28,12 +28,16 @@ class AppThemeAccess{
   }
 
   /// Initializes [currentAppTheme] as [theme].
-  /// Sets [isDarkMode] == [true]?
+  /// Sets [isDarkMode] == [true].
   static void initDarkMode({required AppTheme theme}) {
     currentAppTheme = theme;
   }
 
 
+  /// The current [AppTheme].
   static AppTheme? currentAppTheme;
+
+  /// The current [AppTheme] with [isDarkMode] == [true].
+  /// This [AppTheme] should be a dark mode [AppTheme].
   static AppTheme? currentAppThemeDarkMode;
 }
