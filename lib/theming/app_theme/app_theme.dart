@@ -12,7 +12,10 @@ abstract class AppTheme {
   /// The required [ColorSet] that holds all the colors.
   final ColorSet colorSet;
 
+  /// The required [TextSizeSet] that holds all the heading font sizes.
   final TextSizeSet headingSizeSet;
+
+  /// The required [TextSizeSet] that holds all the font sizes of a text.
   final TextSizeSet textSizeSet;
 
   Color get primary;
@@ -31,9 +34,13 @@ abstract class AppTheme {
   /// The secondary color of the background.
   Color get backgroundSecondary;
 
+  /// The default color of a text.
   Color get defaultTextColor;
 
+  /// The default font size of a text.
   double get defaultFontSize;
+
+  /// The default font size of a heading.
   double get defaultHeadingSize;
 
   /// [primary] == true : Gets [foregroundPrimary] and [backgroundPrimary] as [ColorTuple].
@@ -49,6 +56,7 @@ abstract class AppTheme {
   ColorTuple get secondaryTuple =>
       ColorTuple(foregroundSecondary, backgroundSecondary);
 
+  ///ToDo: Was genau macht der boxShadow? Bzw ob und wie soll das beschrieben werden?
   List<BoxShadow> get boxShadow => [
     BoxShadow(
       color: Colors.grey.withOpacity(0.3),

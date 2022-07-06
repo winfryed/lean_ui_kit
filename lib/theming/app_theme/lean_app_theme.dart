@@ -9,7 +9,10 @@ import 'package:lean_ui_kit/theming/text_size_set/lean_text_size_set.dart';
 /// Use this class if you want to manipulate the [LeanAppTheme] elements.
 class LeanAppTheme extends AppTheme {
 
-  /// The constructor needs a [ColorSet] that holds all the colors of the [LeanAppTheme] elements.
+  /// The constructor needs:
+  /// A [ColorSet] that holds all the colors of [LeanAppTheme] .
+  /// A [TextSizeSet] that holds all the heading font sizes of [LeanAppTheme].
+  /// A [TextSizeSet] that holds all the regular text font sizes of [LeanAppTheme].
   LeanAppTheme() : super(colorSet: LeanColorSet(),headingSizeSet: LeanHeadingSizeSet(),textSizeSet: LeanTextSizeSet());
 
   @override
