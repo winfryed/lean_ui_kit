@@ -3,8 +3,12 @@ import 'dart:ui';
 import 'package:lean_ui_kit/theming/app_theme/app_theme.dart';
 import 'package:lean_ui_kit/theming/color_set/lean_color_set.dart';
 
-class LeanAppTheme extends AppTheme{
-  LeanAppTheme():super(colorSet: LeanColorSet());
+/// This class represents the theme of the app.
+/// Use this class if you want to manipulate the [LeanAppTheme] elements.
+class LeanAppTheme extends AppTheme {
+
+  /// The constructor needs a [ColorSet] that holds all the colors of the [LeanAppTheme] elements.
+  LeanAppTheme() : super(colorSet: LeanColorSet());
 
   @override
   Color get backgroundPrimary => colorSet.c3;
@@ -23,5 +27,4 @@ class LeanAppTheme extends AppTheme{
 
   @override
   Color get secondary => colorSet.c2;
-
 }
