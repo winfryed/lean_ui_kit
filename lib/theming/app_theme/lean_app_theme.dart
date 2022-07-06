@@ -7,7 +7,7 @@ import 'package:lean_ui_kit/theming/color_set/lean_color_set.dart';
 /// Use this class if you want to manipulate the [LeanAppTheme] elements.
 class LeanAppTheme extends AppTheme {
 
-  /// The constructor needs a [ColorSet] that holds all the colors of the theme elements.
+  /// The constructor needs a [ColorSet] that holds all the colors of the [LeanAppTheme] elements.
   LeanAppTheme() : super(colorSet: LeanColorSet());
 
   @override
