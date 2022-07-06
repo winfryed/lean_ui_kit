@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:lean_ui_kit/theming/color_set/color_set.dart';
 
+/// This class represents the color set of the app.
+/// Use this class if you want to manipulate the [LeanColorSet] elements.
 class LeanColorSet extends ColorSet{
   @override
   Color get c1 => const Color.fromARGB(255, 144,182,249);
