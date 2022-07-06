@@ -31,6 +31,8 @@ abstract class AppTheme {
   /// The secondary color of the background.
   Color get backgroundSecondary;
 
+  Color get defaultTextColor;
+
   double get defaultFontSize;
   double get defaultHeadingSize;
 

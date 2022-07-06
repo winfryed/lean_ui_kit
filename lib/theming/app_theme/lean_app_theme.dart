@@ -31,8 +31,11 @@ class LeanAppTheme extends AppTheme {
   Color get secondary => colorSet.c2;
 
   @override
-  double get defaultFontSize => throw UnimplementedError();
+  double get defaultFontSize => textSizeSet.s2;
 
   @override
-  double get defaultHeadingSize => throw UnimplementedError();
+  double get defaultHeadingSize => headingSizeSet.s2;
+
+  @override
+  Color get defaultTextColor => backgroundPrimary;
 }
