@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:lean_ui_kit/theming/other/color_tuple.dart';
+import 'package:lean_ui_kit/theming/text_size_set/text_size_set.dart';
 
 import '../color_set/color_set.dart';
 
 /// Abstract class of the theme of the app.
 /// Use this class if you want to to add another [AppTheme] element.
 abstract class AppTheme {
-  AppTheme({required this.colorSet});
+  AppTheme({required this.colorSet,required this.headingSizeSet,required this.textSizeSet});
 
   /// The required [ColorSet] that holds all the colors.
   final ColorSet colorSet;
+
+  final TextSizeSet headingSizeSet;
+  final TextSizeSet textSizeSet;
 
   Color get primary;
 
@@ -26,6 +30,9 @@ abstract class AppTheme {
 
   /// The secondary color of the background.
   Color get backgroundSecondary;
+
+  double get defaultFontSize;
+  double get defaultHeadingSize;
 
   /// [primary] == true : Gets [foregroundPrimary] and [backgroundPrimary] as [ColorTuple].
   /// [primary] == false : Gets [foregroundSecondary] and [backgroundSecondary] as [ColorTuple].

@@ -17,12 +17,12 @@ class LeanButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
-      style: _style,
+      style: style,
       child: child,
     );
   }
 
-  ButtonStyle get _style {
+  ButtonStyle get style {
     if (overrideButtonStyle != null) {
       return overrideButtonStyle as ButtonStyle;
     }
