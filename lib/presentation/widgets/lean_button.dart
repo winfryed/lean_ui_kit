@@ -3,6 +3,7 @@ import 'package:lean_ui_kit/theming/app_theme_access.dart';
 
 /// This class represents button [Widget].
 class LeanButton extends StatelessWidget {
+
   /// The constructor requires a [onPressed] methode and a [child] [Widget].
   const LeanButton(
       {super.key,
