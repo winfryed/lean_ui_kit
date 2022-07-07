@@ -56,7 +56,7 @@ abstract class AppTheme {
   ColorTuple get secondaryTuple =>
       ColorTuple(foregroundSecondary, backgroundSecondary);
 
-  ///ToDo: Was genau macht der boxShadow? Bzw ob und wie soll das beschrieben werden?
+  /// This is a standardized box shadow for every box (Button, Containers etc.).
   List<BoxShadow> get boxShadow => [
     BoxShadow(
       color: Colors.grey.withOpacity(0.3),
