@@ -4,11 +4,21 @@
 import 'package:flutter/cupertino.dart';
 
 import '../../theming/app_theme/lean_app_theme.dart';
+import '../../theming/app_theme_access.dart';
 
 /// This class represents a container [Widget].
 class LeanContainer extends StatelessWidget {
 
-  /// Use this constructor if you want a [LeanContainer] with a [boxDecoration].
+  /// The default [margin] of [LeanContainer] if [margin] hasn't been initialized.
+  static const EdgeInsetsGeometry defaultMargin = EdgeInsets.all(5);
+
+  /// The default [padding] of [LeanContainer] if [padding] hasn't been initialized.
+  static const EdgeInsetsGeometry defaultPadding = EdgeInsets.all(0);
+
+  static Color defaultColor = AppThemeAccess.theme.backgroundSecondary;
+
+  /// Use this constructor if you want a [LeanContainer] with optional [boxDecoration].
+  /// If [boxDecoration] == null
   LeanContainer(
       {Key? key,
       this.child,
@@ -59,16 +69,11 @@ class LeanContainer extends StatelessWidget {
   final BoxConstraints? constraints;
 
   /// The default [boxDecoration] of [LeanContainer] if [boxDecoration] hasn't been initialized.
-  final BoxDecoration defaultBoxDecoration = BoxDecoration(
+  static const BoxDecoration defaultBoxDecoration = BoxDecoration(
       color: Color.fromARGB(255, 255, 255, 255),
       borderRadius: BorderRadius.all(Radius.circular(10)),
-      boxShadow: LeanAppTheme().boxShadow);
+      boxShadow: AppThemeAccess.theme.boxShadow);
 
-  /// The default [margin] of [LeanContainer] if [margin] hasn't been initialized.
-  final EdgeInsetsGeometry defaultMargin = const EdgeInsets.all(5);
-
-  /// The default [padding] of [LeanContainer] if [padding] hasn't been initialized.
-  final EdgeInsetsGeometry defaultPadding = const EdgeInsets.all(5);
 
   @override
   Widget build(BuildContext context) {
@@ -78,8 +83,8 @@ class LeanContainer extends StatelessWidget {
       constraints: constraints,
       width: width,
       height: height,
-      margin: margin ?? const EdgeInsets.all(5),
-      padding: padding ?? const EdgeInsets.all(5),
+      margin: margin ?? defaultMargin,
+      padding: padding ?? defaultPadding,
       child: child,
     );
   }
