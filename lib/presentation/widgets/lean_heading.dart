@@ -3,6 +3,7 @@ import 'package:lean_ui_kit/presentation/widgets/lean_text.dart';
 
 import '../../theming/app_theme_access.dart';
 
+/// This class represents heading text [Widget].
 class LeanHeading extends LeanText {
   const LeanHeading(String text,{super.key,super.fontSize,super.color}):super(text);
 
