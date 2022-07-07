@@ -12,10 +12,10 @@ class LeanSpacedColumn extends StatelessWidget {
   static const double defaultSpace = 5;
 
   /// The default [mainAxisAlignment] of [LeanSpacedColumn] if [mainAxisAlignment] hasn't been initialized.
-  static MainAxisAlignment defaultMainAxisAlignment = AppThemeAccess.theme.defaultMainAxisAlignment;
+  static MainAxisAlignment defaultMainAxisAlignment = AppThemeAccess.theme.defaultMainAxisAlignmentForSpacedColumn;
 
   /// The default [crossAxisAlignment] of [LeanSpacedColumn] if [crossAxisAlignment] hasn't been initialized.
-  static CrossAxisAlignment defaultCrossAxisAlignment = AppThemeAccess.theme.defaultCrossAxisAlignment;
+  static CrossAxisAlignment defaultCrossAxisAlignment = AppThemeAccess.theme.defaultCrossAxisAlignmentForSpacedColumn;
 
   /// This constructor requires list of children [Widget]s.
   const LeanSpacedColumn(

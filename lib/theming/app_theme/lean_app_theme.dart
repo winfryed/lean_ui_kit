@@ -50,8 +50,14 @@ class LeanAppTheme extends AppTheme {
   EdgeInsetsGeometry get defaultContainerMargin => const EdgeInsets.all(5);
 
   @override
-  CrossAxisAlignment get defaultCrossAxisAlignment => CrossAxisAlignment.center;
+  CrossAxisAlignment get defaultCrossAxisAlignmentForSpacedColumn => CrossAxisAlignment.center;
 
   @override
-  MainAxisAlignment get defaultMainAxisAlignment => MainAxisAlignment.spaceEvenly;
+  CrossAxisAlignment get defaultCrossAxisAlignmentForSpacedRow => CrossAxisAlignment.center;
+
+  @override
+  MainAxisAlignment get defaultMainAxisAlignmentForSpacedColumn => MainAxisAlignment.spaceEvenly;
+
+  @override
+  MainAxisAlignment get defaultMainAxisAlignmentForSpacedRow => MainAxisAlignment.spaceEvenly;
 }

@@ -49,11 +49,17 @@ abstract class AppTheme {
   /// The default color of [LeanContainer].
   Color get defaultContainerColor;
 
-  /// The default [MainAxisAlignment] for [LeanSpacedColumn] and [LeanSpacedRow].
-  MainAxisAlignment get defaultMainAxisAlignment;
+  /// The default [MainAxisAlignment] for [LeanSpacedColumn].
+  MainAxisAlignment get defaultMainAxisAlignmentForSpacedColumn;
 
-  /// The default [CrossAxisAlignment] for [LeanSpacedColumn] and [LeanSpacedRow].
-  CrossAxisAlignment get defaultCrossAxisAlignment;
+  /// The default [MainAxisAlignment] for [LeanSpacedRow].
+  MainAxisAlignment get defaultMainAxisAlignmentForSpacedRow;
+
+  /// The default [CrossAxisAlignment] for [LeanSpacedColumn].
+  CrossAxisAlignment get defaultCrossAxisAlignmentForSpacedColumn;
+
+  /// The default [CrossAxisAlignment] for [LeanSpacedRow].
+  CrossAxisAlignment get defaultCrossAxisAlignmentForSpacedRow;
 
   /// [primary] == true : Gets [foregroundPrimary] and [backgroundPrimary] as [ColorTuple].
   /// [primary] == false : Gets [foregroundSecondary] and [backgroundSecondary] as [ColorTuple].
