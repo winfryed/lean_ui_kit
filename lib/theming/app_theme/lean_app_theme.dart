@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:lean_ui_kit/theming/app_theme/app_theme.dart';
 import 'package:lean_ui_kit/theming/color_set/lean_color_set.dart';
 import 'package:lean_ui_kit/theming/text_size_set/lean_heading_size_set.dart';
@@ -41,4 +42,16 @@ class LeanAppTheme extends AppTheme {
 
   @override
   Color get defaultTextColor => foregroundPrimary;
+
+  @override
+  Color get defaultContainerColor => colorSet.c5;
+
+  @override
+  EdgeInsetsGeometry get defaultContainerMargin => const EdgeInsets.all(5);
+
+  @override
+  CrossAxisAlignment get defaultCrossAxisAlignment => CrossAxisAlignment.center;
+
+  @override
+  MainAxisAlignment get defaultMainAxisAlignment => MainAxisAlignment.spaceEvenly;
 }

@@ -3,23 +3,26 @@
 
 import 'package:flutter/cupertino.dart';
 
-import '../../theming/app_theme/lean_app_theme.dart';
 import '../../theming/app_theme_access.dart';
 
 /// This class represents a container [Widget].
 class LeanContainer extends StatelessWidget {
 
   /// The default [margin] of [LeanContainer] if [margin] hasn't been initialized.
-  static const EdgeInsetsGeometry defaultMargin = EdgeInsets.all(5);
+  static EdgeInsetsGeometry defaultMargin = AppThemeAccess.theme.defaultContainerMargin;
 
   /// The default [padding] of [LeanContainer] if [padding] hasn't been initialized.
   static const EdgeInsetsGeometry defaultPadding = EdgeInsets.all(0);
 
-  static Color defaultColor = AppThemeAccess.theme.backgroundSecondary;
+  /// The default [BoxDecoration.borderRadius] of [LeanContainer] if [BoxDecoration.borderRadius] hasn't been initialized.
+  static const BorderRadius defaultBorderRadius = BorderRadius.all(Radius.circular(10));
+
+  /// The default [BoxDecoration.color] of [LeanContainer] if [BoxDecoration.color] hasn't been initialized.
+  static Color defaultColor = AppThemeAccess.theme.defaultContainerColor;
 
   /// Use this constructor if you want a [LeanContainer] with optional [boxDecoration].
-  /// If [boxDecoration] == null
-  LeanContainer(
+  /// If [boxDecoration] == null : Sets [boxDecoration] to [defaultBoxDecoration].
+  const LeanContainer(
       {Key? key,
       this.child,
       this.width,
@@ -32,7 +35,7 @@ class LeanContainer extends StatelessWidget {
       : super(key: key);
 
   /// Use this constructor if you want a [LeanContainer] without a [boxDecoration].
-  LeanContainer.noBoxStyle(
+   const LeanContainer.noBoxStyle(
       {Key? key,
       this.child,
       this.width,
@@ -68,18 +71,14 @@ class LeanContainer extends StatelessWidget {
   /// The [Container.constraints] of [LeanContainer].
   final BoxConstraints? constraints;
 
-  /// The default [boxDecoration] of [LeanContainer] if [boxDecoration] hasn't been initialized.
-  static const BoxDecoration defaultBoxDecoration = BoxDecoration(
-      color: Color.fromARGB(255, 255, 255, 255),
-      borderRadius: BorderRadius.all(Radius.circular(10)),
-      boxShadow: AppThemeAccess.theme.boxShadow);
-
-
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: alignment,
-      decoration: boxDecoration ?? defaultBoxDecoration,
+      decoration: boxDecoration ?? BoxDecoration(
+          color: defaultColor,
+          borderRadius: defaultBorderRadius,
+          boxShadow: AppThemeAccess.theme.boxShadow),
       constraints: constraints,
       width: width,
       height: height,

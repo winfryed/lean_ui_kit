@@ -2,9 +2,20 @@
 // Date = 07.07.2022
 
 import 'package:flutter/material.dart';
+import 'package:lean_ui_kit/theming/app_theme/lean_app_theme.dart';
+import 'package:lean_ui_kit/theming/app_theme_access.dart';
 
 /// This class represents a spaced column [Widget] with a [SizedBox] with a height of [spaceDy] between each element.
 class LeanSpacedColumn extends StatelessWidget {
+
+  /// The default [spaceDy] between each element of [children] if [spaceDy] hasn't been initialized.
+  static const double defaultSpace = 5;
+
+  /// The default [mainAxisAlignment] of [LeanSpacedColumn] if [mainAxisAlignment] hasn't been initialized.
+  static MainAxisAlignment defaultMainAxisAlignment = AppThemeAccess.theme.defaultMainAxisAlignment;
+
+  /// The default [crossAxisAlignment] of [LeanSpacedColumn] if [crossAxisAlignment] hasn't been initialized.
+  static CrossAxisAlignment defaultCrossAxisAlignment = AppThemeAccess.theme.defaultCrossAxisAlignment;
 
   /// This constructor requires list of children [Widget]s.
   const LeanSpacedColumn(
@@ -27,9 +38,6 @@ class LeanSpacedColumn extends StatelessWidget {
   /// The list of [Widget]s that [LeanSpacedColumn] holds.
   final List<Widget> children;
 
-  /// The default [spaceDy] between each element of [children] if [spaceDy] hasn't been initialized.
-  final double defaultSpace = 5;
-
   @override
   Widget build(BuildContext context) {
     List<Widget> spacedWidgets = [];
@@ -43,9 +51,9 @@ class LeanSpacedColumn extends StatelessWidget {
     }
     return Column(
       mainAxisAlignment:
-      mainAxisAlignment ?? MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment ?? defaultMainAxisAlignment,
       crossAxisAlignment:
-      crossAxisAlignment ?? CrossAxisAlignment.center,
+      crossAxisAlignment ?? defaultCrossAxisAlignment,
       children: spacedWidgets,
     );
   }
