@@ -43,6 +43,24 @@ abstract class AppTheme {
   /// The default font size of a heading.
   double get defaultHeadingSize;
 
+  /// The default margin of [LeanContainer].
+  EdgeInsetsGeometry get defaultContainerMargin;
+
+  /// The default color of [LeanContainer].
+  Color get defaultContainerColor;
+
+  /// The default [MainAxisAlignment] for [LeanSpacedColumn].
+  MainAxisAlignment get defaultMainAxisAlignmentForSpacedColumn;
+
+  /// The default [MainAxisAlignment] for [LeanSpacedRow].
+  MainAxisAlignment get defaultMainAxisAlignmentForSpacedRow;
+
+  /// The default [CrossAxisAlignment] for [LeanSpacedColumn].
+  CrossAxisAlignment get defaultCrossAxisAlignmentForSpacedColumn;
+
+  /// The default [CrossAxisAlignment] for [LeanSpacedRow].
+  CrossAxisAlignment get defaultCrossAxisAlignmentForSpacedRow;
+
   /// [primary] == true : Gets [foregroundPrimary] and [backgroundPrimary] as [ColorTuple].
   /// [primary] == false : Gets [foregroundSecondary] and [backgroundSecondary] as [ColorTuple].
   ColorTuple getColorTuple({bool primary = true}) =>
