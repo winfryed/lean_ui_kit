@@ -12,7 +12,7 @@ class LeanContainer extends StatelessWidget {
   static EdgeInsetsGeometry defaultMargin = AppThemeAccess.theme.defaultContainerMargin;
 
   /// The default [padding] of [LeanContainer] if [padding] hasn't been initialized.
-  static const EdgeInsetsGeometry defaultPadding = EdgeInsets.all(0);
+  static const EdgeInsetsGeometry defaultPadding = EdgeInsets.all(10);
 
   /// The default [BoxDecoration.borderRadius] of [LeanContainer] if [BoxDecoration.borderRadius] hasn't been initialized.
   static const BorderRadius defaultBorderRadius = BorderRadius.all(Radius.circular(10));
@@ -24,7 +24,7 @@ class LeanContainer extends StatelessWidget {
   /// If [boxDecoration] == null : Sets [boxDecoration] to [defaultBoxDecoration].
   const LeanContainer(
       {Key? key,
-      this.child,
+      Widget? child,
       this.width,
       this.height,
       this.margin,
@@ -32,23 +32,23 @@ class LeanContainer extends StatelessWidget {
       this.boxDecoration,
       this.constraints,
       this.alignment})
-      : super(key: key);
+      : _child=child,super(key: key);
 
   /// Use this constructor if you want a [LeanContainer] without a [boxDecoration].
    const LeanContainer.noBoxStyle(
       {Key? key,
-      this.child,
+      required Widget? child,
       this.width,
       this.height,
       this.margin,
       this.padding,
       this.constraints,
       this.alignment})
-      : boxDecoration = const BoxDecoration(),
+      : boxDecoration = const BoxDecoration(),_child=child,
         super(key: key);
 
   /// The child [Widget] that is placed within [LeanContainer].
-  final Widget? child;
+  final Widget? _child;
 
   /// The [Container.width] of [LeanContainer].
   final double? width;
@@ -87,4 +87,6 @@ class LeanContainer extends StatelessWidget {
       child: child,
     );
   }
+
+  Widget? get child=>_child;
 }
