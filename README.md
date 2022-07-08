@@ -3,7 +3,7 @@
 I am trying to build a small ui_kit for fun.
 Further info will follow.
 
-##widgets:
+## widgets:
 - LeanButton
 - LeanContainer
 - LeanContainerScrollable
