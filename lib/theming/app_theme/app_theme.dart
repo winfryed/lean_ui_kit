@@ -43,8 +43,8 @@ abstract class AppTheme {
   /// The default font size of a heading.
   double get defaultHeadingSize;
 
-  /// The default margin of [LeanContainer].
-  EdgeInsetsGeometry get defaultContainerMargin;
+  /// The default padding of [LeanContainer].
+  EdgeInsetsGeometry get defaultContainerPadding;
 
   /// The default color of [LeanContainer].
   Color get defaultContainerColor;
