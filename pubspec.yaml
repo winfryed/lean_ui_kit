@@ -1,5 +1,5 @@
 name: lean_ui_kit
-description: A small ui_kit with basic components.
+description: A small ui_kit with basic components like Buttons, Rows, Columns, Containers and a developed theming idea.
 
 
 # The following defines the version and build number for your application.
@@ -12,7 +12,7 @@ description: A small ui_kit with basic components.
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 0.0.2
+version: 0.2.0
 homepage: https://github.com/winfryed/lean_ui_kit
 
 environment:

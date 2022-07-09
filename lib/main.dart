@@ -1,6 +1,5 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:lean_ui_kit/presentation/widgets/lean_container_scrollable.dart';
 import 'package:lean_ui_kit/presentation/widgets/lean_scaffold.dart';
 import 'package:lean_ui_kit/presentation/widgets/lean_text.dart';
 import 'package:lean_ui_kit/theming/app_theme/lean_app_theme.dart';
@@ -18,9 +17,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home: LeanScaffold(body: LeanText("hi"))
-    );
+        title: 'Flutter Demo',
+        home: LeanScaffold(
+          body: widget(),
+          backgroundColor: AppThemeAccess.theme.backgroundSecondary,
+        ));
   }
 }
 
+Widget widget() {
+  return LeanContainerScrollable(
+    height: 50,
+    width: 100,
+    child: LeanText("hi whats upp \n man in there it is cold"),
+  );
+}
