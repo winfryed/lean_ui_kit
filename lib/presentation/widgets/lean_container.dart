@@ -9,10 +9,10 @@ import '../../theming/app_theme_access.dart';
 class LeanContainer extends StatelessWidget {
 
   /// The default [margin] of [LeanContainer] if [margin] hasn't been initialized.
-  static EdgeInsetsGeometry defaultMargin = AppThemeAccess.theme.defaultContainerMargin;
+  static EdgeInsetsGeometry defaultMargin = const EdgeInsets.all(10);
 
   /// The default [padding] of [LeanContainer] if [padding] hasn't been initialized.
-  static const EdgeInsetsGeometry defaultPadding = EdgeInsets.all(10);
+  static EdgeInsetsGeometry defaultPadding = AppThemeAccess.theme.defaultContainerPadding;
 
   /// The default [BoxDecoration.borderRadius] of [LeanContainer] if [BoxDecoration.borderRadius] hasn't been initialized.
   static const BorderRadius defaultBorderRadius = BorderRadius.all(Radius.circular(10));
