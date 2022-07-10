@@ -12,6 +12,24 @@ class LeanButton extends StatelessWidget {
       this.overrideButtonStyle,
       this.backgroundColor});
 
+  /// Use this constructor if you want to initialize [LeanButton] with [AppThemeAccess.theme.backgroundPrimary].
+  /// The constructor requires a [onPressed] methode and a [child] [Widget].
+  LeanButton.backgroundPrimary(
+      {super.key,
+        required this.onPressed,
+        required this.child,
+        this.overrideButtonStyle})
+      : backgroundColor = AppThemeAccess.theme.backgroundPrimary;
+
+  /// Use this constructor if you want to initialize [LeanButton] with [AppThemeAccess.theme.backgroundSecondary].
+  /// The constructor requires a [onPressed] methode and a [child] [Widget].
+  LeanButton.backgroundSecondary(
+      {super.key,
+      required this.onPressed,
+      required this.child,
+      this.overrideButtonStyle})
+      : backgroundColor = AppThemeAccess.theme.backgroundSecondary;
+
   /// Function that is called when [LeanButton] was pressed.
   final VoidCallback onPressed;
 
