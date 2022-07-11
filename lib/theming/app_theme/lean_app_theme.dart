@@ -47,7 +47,7 @@ class LeanAppTheme extends AppTheme {
   Color get defaultContainerColor => colorSet.c5;
 
   @override
-  EdgeInsetsGeometry get defaultContainerPadding => const EdgeInsets.all(0);
+  EdgeInsetsGeometry get defaultContainerPadding => const EdgeInsets.all(5);
 
   @override
   CrossAxisAlignment get defaultCrossAxisAlignmentForSpacedColumn => CrossAxisAlignment.center;
