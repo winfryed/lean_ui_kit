@@ -47,7 +47,7 @@ class LeanAppTheme extends AppTheme {
   Color get defaultContainerColor => colorSet.c5;
 
   @override
-  EdgeInsetsGeometry get defaultContainerPadding => const EdgeInsets.all(0);
+  EdgeInsetsGeometry get defaultContainerPadding => const EdgeInsets.all(5);
 
   @override
   CrossAxisAlignment get defaultCrossAxisAlignmentForSpacedColumn => CrossAxisAlignment.center;
@@ -56,10 +56,7 @@ class LeanAppTheme extends AppTheme {
   CrossAxisAlignment get defaultCrossAxisAlignmentForSpacedRow => CrossAxisAlignment.center;
 
   @override
-  MainAxisAlignment get defaultMainAxisAlignmentForSpacedColumn => MainAxisAlignment.spaceEvenly;
-
-  @override
-  MainAxisAlignment get defaultMainAxisAlignmentForSpacedRow => MainAxisAlignment.spaceEvenly;
+  MainAxisAlignment get defaultMainAxisAlignmentForSpacedColumn => MainAxisAlignment.start;
 
   @override
   Color get defaultIconColor => colorSet.c1;
@@ -69,4 +66,7 @@ class LeanAppTheme extends AppTheme {
 
   @override
   Color get defaultButtonColor => colorSet.c1;
+  
+  @override
+  MainAxisAlignment get defaultMainAxisAlignmentForSpacedRow => MainAxisAlignment.center;
 }
