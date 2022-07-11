@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:lean_ui_kit/presentation/widgets/lean_button.dart';
+import 'package:lean_ui_kit/presentation/widgets/lean_circle_button.dart';
+import 'package:lean_ui_kit/presentation/widgets/lean_icon.dart';
 import 'package:lean_ui_kit/theming/other/color_tuple.dart';
 import 'package:lean_ui_kit/theming/text_size_set/text_size_set.dart';
 
@@ -60,6 +63,15 @@ abstract class AppTheme {
 
   /// The default [CrossAxisAlignment] for [LeanSpacedRow].
   CrossAxisAlignment get defaultCrossAxisAlignmentForSpacedRow;
+
+  /// The default [Icon.color] for [LeanIcon].
+  Color get defaultIconColor;
+
+  /// The default [Icon.size] for [LeanIcon].
+  double get defaultIconSize;
+
+  /// The default color for [LeanButton] and [LeanCircleButton].
+  Color get defaultButtonColor;
 
   /// [primary] == true : Gets [foregroundPrimary] and [backgroundPrimary] as [ColorTuple].
   /// [primary] == false : Gets [foregroundSecondary] and [backgroundSecondary] as [ColorTuple].

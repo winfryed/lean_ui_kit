@@ -59,5 +59,14 @@ class LeanAppTheme extends AppTheme {
   MainAxisAlignment get defaultMainAxisAlignmentForSpacedColumn => MainAxisAlignment.start;
 
   @override
+  Color get defaultIconColor => colorSet.c1;
+
+  @override
+  double get defaultIconSize => 25;
+
+  @override
+  Color get defaultButtonColor => colorSet.c1;
+  
+  @override
   MainAxisAlignment get defaultMainAxisAlignmentForSpacedRow => MainAxisAlignment.center;
 }
