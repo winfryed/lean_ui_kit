@@ -59,6 +59,6 @@ class LeanButton extends StatelessWidget {
       return overrideButtonStyle as ButtonStyle;
     }
     return ElevatedButton.styleFrom(
-        primary: backgroundColor ?? AppThemeAccess.theme.primary);
+        primary: backgroundColor ?? AppThemeAccess.theme.defaultButtonColor);
   }
 }
