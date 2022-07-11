@@ -56,8 +56,8 @@ class LeanAppTheme extends AppTheme {
   CrossAxisAlignment get defaultCrossAxisAlignmentForSpacedRow => CrossAxisAlignment.center;
 
   @override
-  MainAxisAlignment get defaultMainAxisAlignmentForSpacedColumn => MainAxisAlignment.spaceEvenly;
+  MainAxisAlignment get defaultMainAxisAlignmentForSpacedColumn => MainAxisAlignment.start;
 
   @override
-  MainAxisAlignment get defaultMainAxisAlignmentForSpacedRow => MainAxisAlignment.spaceEvenly;
+  MainAxisAlignment get defaultMainAxisAlignmentForSpacedRow => MainAxisAlignment.center;
 }
