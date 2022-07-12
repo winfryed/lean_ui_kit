@@ -10,8 +10,8 @@ import 'lean_text.dart';
 /// This class represents button [Widget] with a [LeanText] as child.
 class LeanTextButton extends LeanButton {
   /// The constructor requires a [onPressed] methode and a string for [LeanText].
-  LeanTextButton(this.textColor, this.fontSize,
-      {super.key,
+  LeanTextButton({this.textColor, this.fontSize,
+      super.key,
       required super.onPressed,
       required this.buttonText,
       super.overrideButtonStyle,
@@ -20,7 +20,7 @@ class LeanTextButton extends LeanButton {
             child: LeanText(
           buttonText,
           fontSize: fontSize ?? AppThemeAccess.theme.defaultFontSize,
-          color: textColor ?? AppThemeAccess.theme.defaultTextColor,
+          color: textColor ?? AppThemeAccess.theme.onPrimary,
         ));
 
   /// Use this constructor if you want to initialize [LeanTextButton] with [AppThemeAccess.theme.backgroundPrimary]
@@ -33,7 +33,7 @@ class LeanTextButton extends LeanButton {
       required this.buttonText,
       super.overrideButtonStyle})
       : textColor=null,super(
-            backgroundColor: AppThemeAccess.theme.backgroundPrimary,
+            backgroundColor: AppThemeAccess.theme.primary,
             child: LeanText(
               buttonText,
               fontSize:
@@ -51,7 +51,7 @@ class LeanTextButton extends LeanButton {
       required this.buttonText,
       super.overrideButtonStyle})
       : textColor=null,super(
-            backgroundColor: AppThemeAccess.theme.backgroundPrimary,
+            backgroundColor: AppThemeAccess.theme.secondary,
             child: LeanText(buttonText,
                 fontSize:
                     fontSize ?? AppThemeAccess.theme.defaultFontSize,
