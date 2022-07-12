@@ -73,8 +73,11 @@ abstract class AppTheme {
   /// The default color for [LeanButton] and [LeanCircleButton].
   Color get defaultButtonColor;
 
-  /// The default color for [LeanText] in [LeanTextButton].
-  Color get defaultButtonTextColor;
+  /// The default color for child on primary color.
+  Color get onPrimary;
+
+  /// The default color for child on primary color.
+  Color get onSecondary;
 
   /// [primary] == true : Gets [foregroundPrimary] and [backgroundPrimary] as [ColorTuple].
   /// [primary] == false : Gets [foregroundSecondary] and [backgroundSecondary] as [ColorTuple].
