@@ -1,0 +1,69 @@
+// Author = Collin Flügel
+// Date = 11.07.2022
+
+import 'package:flutter/material.dart';
+import 'package:lean_ui_kit/theming/app_theme_access.dart';
+
+import 'lean_text.dart';
+
+/// This class represents button [Widget] with a [LeanText] as child.
+class LeanTextButton extends StatelessWidget {
+
+  /// The constructor requires a [onPressed] methode and a [LeanText].
+  const LeanTextButton(
+      {super.key,
+        required this.onPressed,
+        required this.buttonText,
+        this.overrideButtonStyle,
+        this.backgroundColor});
+
+  /// Use this constructor if you want to initialize [LeanTextButton] with [AppThemeAccess.theme.backgroundPrimary].
+  /// The constructor requires a [onPressed] methode and a [LeanText].
+  LeanTextButton.backgroundPrimary(
+      {super.key,
+        required this.onPressed,
+        required this.buttonText,
+        this.overrideButtonStyle})
+      : backgroundColor = AppThemeAccess.theme.backgroundPrimary;
+
+  /// Use this constructor if you want to initialize [LeanTextButton] with [AppThemeAccess.theme.backgroundSecondary].
+  /// The constructor requires a [onPressed] methode and a [LeanText].
+  LeanTextButton.backgroundSecondary(
+      {super.key,
+        required this.onPressed,
+        required this.buttonText,
+        this.overrideButtonStyle})
+      : backgroundColor = AppThemeAccess.theme.backgroundSecondary;
+
+  /// Function that is called when [LeanTextButton] was pressed.
+  final VoidCallback onPressed;
+
+  /// The child [Widget] that is placed within [LeanTextButton].
+  final LeanText buttonText;
+
+  /// Here you can override the [ButtonStyle] of [LeanTextButton].
+  final ButtonStyle? overrideButtonStyle;
+
+  /// The background color of [LeanTextButton].
+  final Color? backgroundColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: style,
+      child: buttonText,
+    );
+  }
+
+  /// Gets [overrideButtonStyle] of [LeanTextButton].
+  /// If [overrideButtonStyle] == null : Gets a [ButtonStyle] with [backgroundColor] as primary color.
+  /// if [backgroundColor] == null : Gets a [ButtonStyle] with [AppThemeAccess.theme.primary] as primary color.
+  ButtonStyle get style {
+    if (overrideButtonStyle != null) {
+      return overrideButtonStyle as ButtonStyle;
+    }
+    return ElevatedButton.styleFrom(
+        primary: backgroundColor ?? AppThemeAccess.theme.defaultButtonColor);
+  }
+}
