@@ -69,4 +69,7 @@ class LeanAppTheme extends AppTheme {
   
   @override
   MainAxisAlignment get defaultMainAxisAlignmentForSpacedRow => MainAxisAlignment.center;
+
+  @override
+  Color get defaultButtonTextColor => colorSet.c1;
 }
