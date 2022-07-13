@@ -38,14 +38,20 @@ class LeanTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      textAlignVertical: TextAlignVertical.center,
-      controller: controller,
-      decoration: inputDecoration,
-      cursorColor: textColorOverride ?? AppThemeAccess.theme.defaultTextColor,
-      autocorrect: true,
-      style: textStyle,
-      maxLines: maxLinesOverride ?? 1,
+    return LeanContainer(
+      boxDecoration: BoxDecoration(
+          color: backgroundColorOverride ??
+              AppThemeAccess.theme.defaultInputFieldColor,
+          boxShadow: AppThemeAccess.theme.boxShadow),
+      child: TextField(
+        textAlignVertical: TextAlignVertical.center,
+        controller: controller,
+        decoration: inputDecoration,
+        cursorColor: textColorOverride ?? AppThemeAccess.theme.defaultTextColor,
+        autocorrect: true,
+        style: textStyle,
+        maxLines: maxLinesOverride ?? 1,
+      ),
     );
   }
 
@@ -62,7 +68,7 @@ class LeanTextField extends StatelessWidget {
         hintText: hintText,
         hintStyle: textStyle,
         border: InputBorder.none,
-        filled: true,
+        filled: false,
         fillColor: backgroundColorOverride ??
             AppThemeAccess.theme.defaultInputFieldColor);
   }
