@@ -15,7 +15,7 @@ class LeanTextField extends StatelessWidget {
       this.textSizeOverride,
       this.textColorOverride,
       this.backgroundColorOverride,
-      this.maxLines})
+      this.maxLinesOverride})
       : super(key: key);
 
   /// A controller for an editable text field.
@@ -34,7 +34,7 @@ class LeanTextField extends StatelessWidget {
   final Color? backgroundColorOverride;
 
   /// Use this override to change the maximum lines that can be input into the text field.
-  final int? maxLines;
+  final int? maxLinesOverride;
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +45,7 @@ class LeanTextField extends StatelessWidget {
       cursorColor: textColorOverride ?? AppThemeAccess.theme.defaultTextColor,
       autocorrect: true,
       style: textStyle,
-      maxLines: maxLines ?? 1,
+      maxLines: maxLinesOverride ?? 1,
     );
   }
 
