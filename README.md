@@ -1,7 +1,7 @@
 # lean_ui_kit
 
-I am trying to build a small ui_kit for fun.
-Further info will follow.
+We are building a small ui_kit for us and we are happy to share with you.
+We hope is will be usefull. :) 
 
 ## widgets:
 - LeanButton
@@ -12,3 +12,18 @@ Further info will follow.
 - LeanScaffold
 - LeanSpacedColumn
 - LeanSpacedRow
+- LeanIcon
+- LeanTextField
+- LeanProgressBar
+
+## screens:
+- LeanScreen
+- LeanListScreen
+
+## theming:
+We wrote our own theming idea;
+A little bit for practise, a little bit because i think some theming things are easier with it.
+- Use AppThemeAccess.init({required AppTheme theme}) to enable theming.
+- AppThemeAccess.theme to access current theme.
+- We have predefined theme for free use. (LeanAppTheme)
+- Darkmode is supported but optional.
