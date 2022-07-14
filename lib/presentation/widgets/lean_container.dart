@@ -31,7 +31,7 @@ class LeanContainer extends StatelessWidget {
       this.padding,
       this.boxDecoration,
       this.constraints,
-      this.alignment})
+      this.alignment, this.color})
       : _child=child,super(key: key);
 
   /// Use this constructor if you want a [LeanContainer] without a [boxDecoration].
@@ -44,7 +44,7 @@ class LeanContainer extends StatelessWidget {
       this.padding,
       this.constraints,
       this.alignment})
-      : boxDecoration = const BoxDecoration(),_child=child,
+      : boxDecoration = const BoxDecoration(),color=null,_child=child,
         super(key: key);
 
   /// The child [Widget] that is placed within [LeanContainer].
@@ -66,17 +66,19 @@ class LeanContainer extends StatelessWidget {
   final Decoration? boxDecoration;
 
   /// The [Container.alignment] of [LeanContainer].
-  final Alignment? alignment;
+  final AlignmentGeometry? alignment;
 
   /// The [Container.constraints] of [LeanContainer].
   final BoxConstraints? constraints;
+
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: alignment,
       decoration: boxDecoration ?? BoxDecoration(
-          color: defaultColor,
+          color: color??defaultColor,
           borderRadius: defaultBorderRadius,
           boxShadow: AppThemeAccess.theme.boxShadow),
       constraints: constraints,
