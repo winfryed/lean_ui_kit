@@ -1,3 +1,14 @@
+## [1.0.0] - First fullversion done
+- Some more Widgets added like:
+  - LeanCircleButton
+  - LeanIcon
+  - LeanTextField
+  - LeanTExtButton
+- Full support of the lean_theme
+  - This kit provides a theming template with color sets and lots of options to change is on your behalf.
+  - Darkmode is supported for all Widgets.
+  - (Most of the features are although supported by Flutter ThemeData, but I wanted to practice by coding
+     a theme by myself.)
 ## [0.2.0] - Theme adding
 - Added more widgets and theming options.
   - LeanContainerScrollable
