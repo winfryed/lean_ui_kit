@@ -16,7 +16,7 @@ class LeanTextField extends StatelessWidget {
       this.textSizeOverride,
       this.textColorOverride,
       this.backgroundColorOverride,
-      this.maxLinesOverride, this.width, this.height, this.hintTextColor})
+      this.maxLinesOverride, this.width, this.height, this.hintTextColor, this.onChanged})
       : super(key: key);
 
   /// A controller for an editable text field.
@@ -43,7 +43,7 @@ class LeanTextField extends StatelessWidget {
 
   final Color? hintTextColor;
 
-
+  final ValueChanged<String>? onChanged;
 
   @override
   Widget build(BuildContext context) {
@@ -53,6 +53,7 @@ class LeanTextField extends StatelessWidget {
       width: width,
       height: height,
       child: TextField(
+        onChanged: onChanged,
         textAlignVertical: TextAlignVertical.center,
         controller: controller,
         decoration: inputDecoration,
@@ -60,6 +61,7 @@ class LeanTextField extends StatelessWidget {
         autocorrect: true,
         style: textStyle,
         maxLines: maxLinesOverride ?? 1,
+
       ),
     );
   }
@@ -76,6 +78,8 @@ class LeanTextField extends StatelessWidget {
     return InputDecoration(
         hintText: hintText,
         hintStyle: hintStyle,
+        isDense: true,
+        contentPadding: EdgeInsets.fromLTRB(5,10,5,5),
         border: InputBorder.none,
         filled: false);
   }
