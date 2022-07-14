@@ -1,3 +1,7 @@
+## [1.0.1]
+- LeanInput update (more fancy)
+- Searchable Scrollable Container (I like that one :))
+
 ## [1.0.0] - First fullversion done
 - Some more Widgets added like:
   - LeanCircleButton

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lean_ui_kit/presentation/screens/lean_list_screen.dart';
+import 'package:lean_ui_kit/presentation/widgets/lean_container_scrollable_searchable.dart';
 import 'package:lean_ui_kit/presentation/widgets/lean_space.dart';
-import 'package:lean_ui_kit/presentation/widgets/lean_text_field.dart';
+import 'package:lean_ui_kit/presentation/widgets/lean_text.dart';
 import 'package:lean_ui_kit/theming/app_theme/lean_app_theme.dart';
 import 'package:lean_ui_kit/theming/app_theme_access.dart';
 
@@ -42,5 +43,9 @@ class TestScreen extends LeanListScreen{
 
 
 Widget widget() {
-  return LeanTextField(controller: TextEditingController(),width: 200,);
+  LeanText t1 = LeanText("abc");
+  LeanText t2 = LeanText("bcd");
+  List<LeanText> list = [t1,t2];
+
+  return LeanContainerScrollableSearchable<LeanText>(children: list, stringExtractor: (e) => e.toString(),width: 300,height: 1000,);
 }

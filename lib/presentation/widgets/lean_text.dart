@@ -35,4 +35,9 @@ class LeanText extends StatelessWidget {
         fontSize: fontSize ?? AppThemeAccess.theme.defaultFontSize,
         color: color ?? AppThemeAccess.theme.defaultTextColor);
   }
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return text;
+  }
 }
