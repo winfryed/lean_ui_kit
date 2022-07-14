@@ -5,7 +5,7 @@ import 'package:lean_ui_kit/theming/app_theme_access.dart';
 class LeanCheckbox extends StatefulWidget {
   const LeanCheckbox({Key? key, required this.onPressed, required this.text, required this.width, this.controller}) : super(key: key);
   final double width;
-  final VoidBoolFunction onPressed;
+  final VoidBoolFunction? onPressed;
   final LeanText text;
   final LeanCheckboxController? controller;
   @override
@@ -34,7 +34,9 @@ class _LeanCheckboxState extends State<LeanCheckbox> {
           if(widget.controller != null) {
             widget.controller?.status = newValue!;
           }
-          widget.onPressed(newValue);
+          if(widget.onPressed != null) {
+            widget.onPressed!(newValue);
+          }
         },
         controlAffinity:
         ListTileControlAffinity.leading, //  <-- leading Checkbox
