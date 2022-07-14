@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lean_ui_kit/presentation/screens/lean_list_screen.dart';
+import 'package:lean_ui_kit/presentation/widgets/lean_checkbox.dart';
+import 'package:lean_ui_kit/presentation/widgets/lean_container.dart';
 import 'package:lean_ui_kit/presentation/widgets/lean_container_scrollable_searchable.dart';
 import 'package:lean_ui_kit/presentation/widgets/lean_space.dart';
 import 'package:lean_ui_kit/presentation/widgets/lean_text.dart';
@@ -31,9 +33,9 @@ class TestScreen extends LeanListScreen{
   @override
   List<Widget> children(BuildContext context) {
     List<Widget> output = [];
-    output.add(LeanDY(y: 100));
-    output.add(widget());
-
+    // output.add(LeanDY(y: 100));
+    // output.add(widget());
+    output.add(LeanContainer(child: LeanCheckbox(onPressed: (b){}, text: LeanText("hi"), width: 100)));
 
     return output;
   }
