@@ -13,7 +13,4 @@ abstract class LeanScreen extends StatelessWidget {
 
   /// The methode that returns the body of [LeanScaffold] in [LeanScreen].
   Widget buildBody(BuildContext context);
-
-  /// The id representing [LeanScreen].
-  String get routeName;
 }

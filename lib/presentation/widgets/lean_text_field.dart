@@ -1,6 +1,7 @@
 // Author = Collin Flügel
 // Date = 13.07.2022
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lean_ui_kit/theming/app_theme_access.dart';
 
@@ -15,7 +16,7 @@ class LeanTextField extends StatelessWidget {
       this.textSizeOverride,
       this.textColorOverride,
       this.backgroundColorOverride,
-      this.maxLinesOverride})
+      this.maxLinesOverride, this.width, this.height, this.hintTextColor})
       : super(key: key);
 
   /// A controller for an editable text field.
@@ -36,13 +37,21 @@ class LeanTextField extends StatelessWidget {
   /// Use this override to change the maximum lines that can be input into the text field.
   final int? maxLinesOverride;
 
+  final double? width;
+
+  final double? height;
+
+  final Color? hintTextColor;
+
+
+
   @override
   Widget build(BuildContext context) {
     return LeanContainer(
-      boxDecoration: BoxDecoration(
-          color: backgroundColorOverride ??
-              AppThemeAccess.theme.defaultInputFieldColor,
-          boxShadow: AppThemeAccess.theme.boxShadow),
+      color: backgroundColorOverride ??
+          AppThemeAccess.theme.defaultInputFieldColor,
+      width: width,
+      height: height,
       child: TextField(
         textAlignVertical: TextAlignVertical.center,
         controller: controller,
@@ -66,10 +75,14 @@ class LeanTextField extends StatelessWidget {
   InputDecoration get inputDecoration {
     return InputDecoration(
         hintText: hintText,
-        hintStyle: textStyle,
+        hintStyle: hintStyle,
         border: InputBorder.none,
-        filled: false,
-        fillColor: backgroundColorOverride ??
-            AppThemeAccess.theme.defaultInputFieldColor);
+        filled: false);
   }
+  TextStyle get hintStyle {
+    return TextStyle(
+        color: hintTextColor??Colors.grey,
+        fontSize: textSizeOverride ?? AppThemeAccess.theme.defaultFontSize);
+  }
+
 }

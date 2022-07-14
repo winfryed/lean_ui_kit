@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lean_ui_kit/presentation/widgets/lean_container_scrollable.dart';
-import 'package:lean_ui_kit/presentation/widgets/lean_scaffold.dart';
-import 'package:lean_ui_kit/presentation/widgets/lean_text.dart';
+import 'package:lean_ui_kit/presentation/screens/lean_list_screen.dart';
+import 'package:lean_ui_kit/presentation/widgets/lean_space.dart';
+import 'package:lean_ui_kit/presentation/widgets/lean_text_field.dart';
 import 'package:lean_ui_kit/theming/app_theme/lean_app_theme.dart';
 import 'package:lean_ui_kit/theming/app_theme_access.dart';
 
@@ -16,19 +16,31 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
         title: 'Flutter Demo',
-        home: LeanScaffold(
-          body: widget(),
-          backgroundColor: AppThemeAccess.theme.backgroundSecondary,
-        ));
+        home: TestScreen(),
+        );
   }
 }
 
+
+class TestScreen extends LeanListScreen{
+  const TestScreen({Key? key}) : super(key: key);
+
+  @override
+  List<Widget> children(BuildContext context) {
+    List<Widget> output = [];
+    output.add(LeanDY(y: 100));
+    output.add(widget());
+
+
+    return output;
+  }
+
+
+}
+
+
 Widget widget() {
-  return LeanContainerScrollable(
-    height: 50,
-    width: 100,
-    child: LeanText("hi whats upp \n man in there it is cold"),
-  );
+  return LeanTextField(controller: TextEditingController(),width: 200,);
 }
