@@ -3,10 +3,11 @@ import 'package:lean_ui_kit/presentation/widgets/lean_text.dart';
 import 'package:lean_ui_kit/theming/app_theme_access.dart';
 
 class LeanCheckbox extends StatefulWidget {
-  const LeanCheckbox({Key? key, required this.onPressed, required this.text, required this.width}) : super(key: key);
+  const LeanCheckbox({Key? key, required this.onPressed, required this.text, required this.width, this.controller}) : super(key: key);
   final double width;
   final VoidBoolFunction onPressed;
   final LeanText text;
+  final LeanCheckboxController? controller;
   @override
   State<LeanCheckbox> createState() => _LeanCheckboxState();
 }
@@ -30,6 +31,9 @@ class _LeanCheckboxState extends State<LeanCheckbox> {
           setState(() {
             isChecked = newValue!;
           });
+          if(widget.controller != null) {
+            widget.controller?.status = newValue!;
+          }
           widget.onPressed(newValue);
         },
         controlAffinity:
@@ -39,3 +43,8 @@ class _LeanCheckboxState extends State<LeanCheckbox> {
   }
 }
 typedef VoidBoolFunction = void Function(bool? bool);
+
+class LeanCheckboxController{
+  LeanCheckboxController({this.status=false});
+  bool status;
+}
