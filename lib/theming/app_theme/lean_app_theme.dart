@@ -75,4 +75,7 @@ class LeanAppTheme extends AppTheme {
 
   @override
   Color get onSecondary => onPrimary;
+
+  @override
+  Color get defaultInputFieldColor => colorSet.c1;
 }

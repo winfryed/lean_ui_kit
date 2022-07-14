@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lean_ui_kit/presentation/widgets/lean_input_field.dart';
 import 'package:lean_ui_kit/presentation/widgets/lean_button.dart';
 import 'package:lean_ui_kit/presentation/widgets/lean_circle_button.dart';
 import 'package:lean_ui_kit/presentation/widgets/lean_icon.dart';
@@ -72,6 +73,9 @@ abstract class AppTheme {
 
   /// The default color for [LeanButton] and [LeanCircleButton].
   Color get defaultButtonColor;
+
+  /// The default color for [LeanInputField].
+  Color get defaultInputFieldColor;
 
   /// The default color for child on primary color.
   Color get onPrimary;
