@@ -1,3 +1,9 @@
+## [1.0.3]
+- LeanIconButton
+
+## [1.0.2]
+- bugfixes
+
 ## [1.0.1]
 - LeanInput update (more fancy)
 - Searchable Scrollable Container (I like that one :))
