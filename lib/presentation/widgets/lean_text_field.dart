@@ -16,7 +16,7 @@ class LeanTextField extends StatelessWidget {
       this.textSizeOverride,
       this.textColorOverride,
       this.backgroundColorOverride,
-      this.maxLinesOverride, this.width, this.height, this.hintTextColor, this.onChanged})
+      this.maxLinesOverride, this.width, this.height, this.hintTextColor, this.onChanged, this.readOnly=false})
       : super(key: key);
 
   /// A controller for an editable text field.
@@ -45,6 +45,8 @@ class LeanTextField extends StatelessWidget {
 
   final ValueChanged<String>? onChanged;
 
+  final bool readOnly;
+
   @override
   Widget build(BuildContext context) {
     return LeanContainer(
@@ -54,6 +56,7 @@ class LeanTextField extends StatelessWidget {
       height: height,
       child: TextField(
         onChanged: onChanged,
+        readOnly: readOnly,
         textAlignVertical: TextAlignVertical.center,
         controller: controller,
         decoration: inputDecoration,
