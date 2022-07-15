@@ -34,8 +34,8 @@ class TestScreen extends LeanListScreen{
   List<Widget> children(BuildContext context) {
     List<Widget> output = [];
     // output.add(LeanDY(y: 100));
-    // output.add(widget());
-    output.add(LeanContainer(child: LeanCheckbox(onPressed: (b){}, text: LeanText("hi"), width: 100)));
+    output.add(widget());
+    // output.add(LeanContainer(child: LeanCheckbox(onPressed: (b){}, leanText: LeanText("hi"), width: 100)));
 
     return output;
   }
@@ -49,5 +49,5 @@ Widget widget() {
   LeanText t2 = LeanText("bcd");
   List<LeanText> list = [t1,t2];
 
-  return LeanContainerScrollableSearchable<LeanText>(children: list, stringExtractor: (e) => e.toString(),width: 300,height: 1000,);
+  return LeanContainerScrollableSearchable<LeanText>(children: list, stringExtractor: (e) => e.toString(),width: 300,height: 150,heading: "hi there",);
 }
