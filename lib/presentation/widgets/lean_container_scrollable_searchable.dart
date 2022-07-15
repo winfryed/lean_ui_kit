@@ -68,7 +68,7 @@ class _LeanContainerScrollableSearchableState<T>
       String textA = controller.text.toLowerCase();
       String textB = widget.string(v).toLowerCase();
       if(textB.contains(textA)) {
-        output.add(v);
+        output.add(SizedBox(width: double.infinity,child: v,));
       }
     }
     return output;
