@@ -4,6 +4,8 @@ import 'package:lean_ui_kit/presentation/widgets/lean_container_scrollable.dart'
 import 'package:lean_ui_kit/presentation/widgets/lean_spaced_column.dart';
 import 'package:lean_ui_kit/presentation/widgets/lean_text_field.dart';
 
+import 'lean_heading.dart';
+
 class LeanContainerScrollableSearchable<T extends Widget>
     extends StatefulWidget {
   const LeanContainerScrollableSearchable(
@@ -11,9 +13,11 @@ class LeanContainerScrollableSearchable<T extends Widget>
       required this.children,
       required this.stringExtractor,
       required this.width,
-      required this.height});
+      required this.height, this.heading});
 
   final List<T> children;
+
+  final String? heading;
 
   final SearchStringExtractor<T> stringExtractor;
 
@@ -41,6 +45,7 @@ class _LeanContainerScrollableSearchableState<T>
       width: widget.width,
       height: widget.height,
       child: LeanSpacedColumn(mainAxisAlignment: MainAxisAlignment.start,children: [
+        if(widget.heading!=null) LeanHeading.s5(widget.heading as String),
         LeanTextField(
           onChanged: (s) {setState(() {});},
           controller: controller,
@@ -49,7 +54,7 @@ class _LeanContainerScrollableSearchableState<T>
         LeanContainerScrollable(
           padding: EdgeInsets.all(0),
             boxDecoration: BoxDecoration(),
-            height: widget.height - 60,
+            height: widget.height-(widget.heading==null?60:90),
             width: widget.width,
             child: LeanSpacedColumn(children: children(context)))
       ]),
