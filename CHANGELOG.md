@@ -1,3 +1,6 @@
+## [1.0.4]
+- LeanNavigator
+
 ## [1.0.3]
 - LeanIconButton
 
