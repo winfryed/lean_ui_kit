@@ -10,6 +10,7 @@ class LeanIconButton extends LeanCircleButton {
       required IconData iconData,
       super.height,
       super.color,
+  this.showToolTipAfter,
       required super.onPressed,
       Color? iconColorOverride})
       : super(
@@ -19,12 +20,12 @@ class LeanIconButton extends LeanCircleButton {
         ));
 
   final String? tooltipMessage;
-
+  final Duration? showToolTipAfter;
   @override
   Widget build(BuildContext context) {
     if(tooltipMessage ==null) {
       return super.build(context);
     }
-    return Tooltip(message: tooltipMessage,waitDuration: Duration(seconds: 1),textStyle: const TextStyle(fontSize: 15,color: Colors.white),child: super.build(context),);
+    return Tooltip(message: tooltipMessage,waitDuration: showToolTipAfter??Duration(seconds: 1),textStyle: const TextStyle(fontSize: 15,color: Colors.white),child: super.build(context),);
   }
 }

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lean_ui_kit/presentation/widgets/lean_spaced_column.dart';
-import 'package:lean_ui_kit/presentation/widgets/lean_text.dart';
 
 import '../../theming/app_theme_access.dart';
 
@@ -18,7 +16,7 @@ class LeanScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SizedBox(width: double.infinity,child: body,),
+      body: SizedBox(width: double.infinity,height: double.infinity,child: body,),
       backgroundColor:
           backgroundColor ?? AppThemeAccess.theme.backgroundPrimary,
     );
